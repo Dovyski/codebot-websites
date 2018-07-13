@@ -86,42 +86,35 @@ ul.nav a:hover {
 	border: none;
 }
 .page h2 {
-	margin-bottom: 50px;
+	font-size: 2em;
 }
 
 .page p {
 	font-size: 1.3em;
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-	height: 650px;
-	background: url(../img/hero.jpg) #3e3f3a;
-	text-align: center;
-	overflow: hidden;
-	position: relative;
-	margin-bottom: 30px;
-	padding-top: 50px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-	margin-bottom: 340px;
+.page span.meta {
+	color: #777;
+	margin-left: 3px;
 }
 
-.carousel div.image {
-	width: 800px;
-	height: 500px;
-	margin: 0 auto;
-	z-index: 10;
+.page span.meta time {
+	margin-right: 10px;
 }
 
-.carousel div.image img {
-	width: 800px;
-	height: auto;
-	margin: 220px 0 -200px 0;
+.page span.meta img {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	margin-top: -3px;
+}
+
+.page div.content {
+	margin-top: 30px;
+}
+
+.page div.content p {
+	font-size: 1.3em;
 }
 
 /* Clouds */
@@ -131,92 +124,6 @@ ul.nav a:hover {
 	height: 130px;
     background: url(../img/cloud.png) repeat-x;
 	z-index: 11;
-}
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-.marketing {
-}
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-	font-weight: bolder;
-	margin-top: 10px;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.marketing-top img {
-	width: 144px;
-	height: 144px;
-}
-
-.marketing-top p {
-	font-size: 1.1em;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette {
-  padding: 100px 0 0 0;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.featurette-image-bottom {
-	margin-top: -10px;
-}
-
-.featurette-image-left {
-	margin-left: -20px;
-}
-
-.featurette-odd {
-	background: #f3f3f3;
-	border-top: solid 1px #e5e5e5;
-	border-bottom: solid 1px #e5e5e5;
-	min-height: 200px;
-}
-
-
-/* Action call
-------------------------- */
-.action-call {
-	color: #fff;
-	padding-top: 50px;
-	width: 100%;
-	background: url(../img/hero.jpg) no-repeat bottom center #3e3f3a;
-	text-align: center;
-	overflow: hidden;
-}
-
-.action-call div.clouds {
-	margin-bottom: -35px;
-}
-
-.action-call p {
-	font-size: 1.5em;
-	margin-top: 20px;
-	line-height: 0.7em;
-}
-
-.action-call strong {
-	font-size: 1.5em;
-	font-weight: 400;
 }
 
 footer {

@@ -44,7 +44,12 @@ class App {
 			$aLayout = $this->mItem['meta']['layout'];
 		}
 
-		$aHtml = $this->mRender->text($this->mItem['content']);
+		$aHtml = '';
+		$aParts = explode("\n", $this->mItem['content']);
+		foreach($aParts as $aLine) {
+			$aHtml .= $this->mRender->text($aLine);
+		}
+
 		$this->renderContentUsingLayout($aHtml, $this->mItem['meta'], $aLayout);
 	}
 
@@ -93,11 +98,11 @@ class App {
 	}
 
 	public function run($theRequest) {
-		$aItem = isset($theRequest['item']) ? basename(realpath($theRequest['item'])) : 'index';
+		$aItem = isset($theRequest['item']) ? basename($theRequest['item']) : 'index';
 		$aItemPath = $this->mDataPath . 'entries/' . $aItem . '.md';
 
 		if(!file_exists($aItemPath)) {
-		    $this->process404();
+			$this->process404();
 			return;
 		}
 
