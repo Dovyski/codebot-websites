@@ -8,7 +8,7 @@
     <meta name="author" content="Fernando Bevilacqua">
     <link rel="icon" href="./favicon.ico">
 
-    <title>Codebot blog - <?php echo App::get('title'); ?></title>
+    <title><?php echo App::get('title'); ?> | Codebot blog</title>
 
     <!-- Huge amount of social/open graph/scheme stuff. Thats the world we live in... -->
     <html itemscope itemtype="http://schema.org/WebApplication">
