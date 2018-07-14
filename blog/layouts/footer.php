@@ -8,12 +8,15 @@
          <div class="col-md-2">
            <h5>Links</h5>
            <p><a href="https://codebot.cc">Codebot</a></p>
-           <p><a href="https://codebot.cc">RSS feed</a></p>
          </div>
          <div class="col-md-2">
              <h5>Social</h5>
              <p><a href="https://github.com/Dovyski/Codebot" target="_blank">Github</a></p>
              <p><a href="https://twitter.com/As3GameGears" target="_blank">Twitter</a></p>
+         </div>
+         <div class="col-md-2">
+           <h5>Misc</h5>
+           <p><a href="https://codebot.cc"><img src="<?php echo App::config('site.base_url'); ?>/img/icons/rss.svg" style="width: 16px; height: 16px;" /> Subscribe</a></p>
          </div>
        </div>
 

@@ -11,7 +11,6 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
-                <li><a href="https://github.com/Dovyski/Codebot" target="_blank"><img src="./img/github.png" style="width: 35px; height: auto; margin-top: -10px;" title="Github repo"> Fork on Github</a></li>
               </ul>
             </div>
           </div>
