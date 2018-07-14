@@ -8,6 +8,7 @@
          <div class="col-md-2">
            <h5>Links</h5>
            <p><a href="https://codebot.cc">Codebot</a></p>
+           <p><a href="https://codebot.cc">RSS feed</a></p>
          </div>
          <div class="col-md-2">
              <h5>Social</h5>

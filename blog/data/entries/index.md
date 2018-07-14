@@ -1,21 +1,4 @@
 ---
 title = "This is a test"
-author = dovyski
-layout = post
-categories[] = blog
-tags[] = tag1
-tags[] = tag2
-tags[] = tag3
+layout = index
 ---
-
-_Lorem_ ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non ipsum elit. Nullam at lectus malesuada, fermentum urna nec, dapibus est. In semper pellentesque porta. Vestibulum eget lorem et dui sagittis pellentesque in id odio. Praesent auctor lorem ut commodo rhoncus. Nunc ultrices mauris ut mi efficitur, ullamcorper eleifend leo pulvinar. Fusce rhoncus justo in risus consequat, nec vehicula arcu tristique. Proin lectus purus, sodales in fringilla sit amet, mollis at felis. Quisque dictum tortor eu convallis volutpat. Integer blandit sapien sit amet posuere tempor. Etiam aliquet ex risus, non commodo ante mollis ut. Nam vehicula eros et ipsum porta egestas ac vitae nisl. Praesent pellentesque accumsan orci eget condimentum. Nullam faucibus sagittis odio, quis porta ex.
-
-Nulla facilisi. Vivamus vel orci nec dolor rutrum aliquet. Ut luctus dui id fringilla dapibus. Nunc viverra venenatis leo. Maecenas malesuada purus vitae nisi suscipit ornare. Nullam vel feugiat augue, a semper turpis. Sed in accumsan elit. Duis non viverra est. Fusce eget condimentum ligula.
-
-Donec sodales ligula id eros sodales, vitae tempor magna sodales. Integer cursus ante eget arcu lacinia vehicula. Cras pellentesque, urna eu imperdiet hendrerit, urna metus rhoncus nulla, nec sodales lacus quam eget nisi. Aliquam erat volutpat. In hac habitasse platea dictumst. Nullam tempus sem enim, nec sodales eros auctor nec. Nunc sit amet rutrum leo. Phasellus feugiat molestie iaculis. Quisque sollicitudin lacus eget tortor tincidunt pretium. Nam varius libero tellus, sit amet sodales est ullamcorper vel. Nunc molestie metus sit amet enim eleifend porttitor. Morbi placerat id erat at tincidunt. Aliquam erat volutpat.
-
-## Section
-
-Nam dignissim consequat hendrerit. Quisque vel mattis dolor. Nunc luctus erat lorem, vel hendrerit dui condimentum et. Praesent scelerisque, eros et gravida suscipit, tortor libero gravida sapien, sit amet porttitor purus odio vel orci. Praesent dictum facilisis lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eget finibus diam. In porttitor mauris sit amet tellus consectetur pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc quis sem lobortis dui interdum auctor. Suspendisse orci ex, euismod placerat finibus a, fermentum at nibh. Duis iaculis dapibus orci vitae tristique.
-
-Nulla facilisi. Vivamus vel orci nec dolor rutrum aliquet. Ut luctus dui id fringilla dapibus. Nunc viverra venenatis leo. Maecenas malesuada purus vitae nisi suscipit ornare. Nullam vel feugiat augue, a semper turpis. Sed in accumsan elit. Duis non viverra est. Fusce eget condimentum ligula.
