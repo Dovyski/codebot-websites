@@ -46,5 +46,5 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo App::config('site.base_url'); ?>/css/style.css?20171208" rel="stylesheet">
+    <link href="<?php echo App::config('site.base_url'); ?>/css/style.css?20189715" rel="stylesheet">
   </head>
