@@ -44,37 +44,17 @@ class App {
 	}
 
 	private function render() {
-		$aLayout = 'post';
-
-		if(isset($this->mItem['meta']['layout'])) {
-			$aLayout = $this->mItem['meta']['layout'];
-		}
-
-		$aHtml = '';
-		$aParts = explode("\n", $this->mItem['content']);
-		foreach($aParts as $aLine) {
-			$aHtml .= $this->mRender->text($aLine);
-		}
-
-		$this->renderContentUsingLayout($aHtml, $this->mItem['meta'], $aLayout);
-	}
-
-	private function renderContentUsingLayout($theContent, $theMeta, $theLayout) {
-		$aLayoutPath = dirname(__FILE__) . '/../layouts/' . $theLayout . '.php';
+		$aLayout = isset($this->mItem['layout']) ? $this->mItem['layout'] : 'post';
+		$aLayoutPath = dirname(__FILE__) . '/../layouts/' . $aLayout . '.php';
 
 		if(!file_exists($aLayoutPath)) {
 			exit('Unknown layout: ' . $aLayoutPath);
 		}
 
-		self::$mData = array(
-			'posts' => $this->findPosts(true),
-			'item' => array_merge($theMeta, array('content' => $theContent)),
-			'config' => $this->mConfig
-		);
 		require_once($aLayoutPath);
 	}
 
-	private function parseItem($theItemPath) {
+	private function loadItem($theItemPath) {
 		$aRawMeta = '';
 		$aRawContent = '';
 		$aIsCollectingMeta = false;
@@ -105,8 +85,33 @@ class App {
 			$aRawContent .= $aLine;
 		}
 
-		$aMeta = $this->parseMetaData($aRawMeta, $theItemPath);
-		return array('content' => $aRawContent, 'meta' => $aMeta);
+		$aRet = array('content' => $aRawContent, 'meta' => $aRawMeta);
+		return $aRet;
+	}
+
+	private function parseItem($theItemPath) {
+		$aRaw = $this->loadItem($theItemPath);
+
+		if($aRaw == null) {
+			return null;
+		}
+
+		$aItem = $this->parseMetaData($aRaw['meta'], $theItemPath);
+		$aItem['content'] = $this->parseRawContent($aRaw['content']);
+		$aItem['excerpt'] = substr(strip_tags($aItem['content']), 0, 170);
+		$aItem['path'] = realpath($theItemPath);
+
+		return $aItem;
+	}
+
+	private function parseRawContent($theRawContent) {
+		$aHtml = '';
+		$aParts = explode("\n", $theRawContent);
+		foreach($aParts as $aLine) {
+			$aHtml .= $this->mRender->text($aLine);
+		}
+
+		return $aHtml;
 	}
 
 	public function getAuthorById($theId) {
@@ -150,15 +155,21 @@ class App {
 	}
 
 	public function run($theRequest) {
-		$aId = isset($theRequest['item']) ? basename($theRequest['item']) : 'index';
-		$aItem = $this->getEntryById($aId);
+		// Make some data available for rendering
+		self::$mData = array(
+			'posts' => $this->findPosts(true),
+			'config' => $this->mConfig
+		);
 
-		if($aItem == null) {
+		$aId = isset($theRequest['item']) ? basename($theRequest['item']) : 'index';
+		$this->mItem = $this->getEntryById($aId);
+
+		if($this->mItem == null) {
 			$this->process404();
 			return;
 		}
 
-		$this->mItem = $aItem;
+		self::$mData['item'] = $this->mItem;
 		$this->render();
 	}
 
@@ -204,9 +215,7 @@ class App {
 			$aId = $this->extracEntryIdFromPath($aEntryPath);
 
 			if($theWithData) {
-				$aEntry = $this->getEntryById($aId);
-				$aRet[$aId] = $aEntry['meta'];
-				$aRet[$aId]['content'] = $aEntry['content'];
+				$aRet[$aId] = $this->getEntryById($aId);
 			}
 
 			$aRet[$aId]['path'] = realpath($aEntryPath);
