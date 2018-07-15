@@ -72,6 +72,10 @@ class App {
 		$aRawContent = '';
 		$aIsCollectingMeta = false;
 
+		if(!$this->isEntryPathValid($theItemPath) || !file_exists($theItemPath)) {
+			return null;
+		}
+
 		foreach (new SplFileObject($theItemPath) as $aLine) {
 			if(empty(trim($aLine))) {
 				continue;
@@ -94,20 +98,70 @@ class App {
 			$aRawContent .= $aLine;
 		}
 
-		return array('content' => $aRawContent, 'meta' => parse_ini_string($aRawMeta, true));
+		$aMeta = parse_ini_string($aRawMeta, true);
+		return array('content' => $aRawContent, 'meta' => $aMeta);
 	}
 
 	public function run($theRequest) {
-		$aItem = isset($theRequest['item']) ? basename($theRequest['item']) : 'index';
-		$aItemPath = $this->mDataPath . 'entries/' . $aItem . '.md';
+		$aId = isset($theRequest['item']) ? basename($theRequest['item']) : 'index';
+		$aItem = $this->getEntryById($aId);
 
-		if(!file_exists($aItemPath)) {
+		if($aItem == null) {
 			$this->process404();
 			return;
 		}
 
-		$this->mItem = $this->parseItem($aItemPath);
+		$this->mItem = $aItem;
 		$this->render();
+	}
+
+	public function getEntriesDirPath() {
+		return $this->mDataPath . 'entries/';
+	}
+
+	public function isEntryPathValid($theEntryPath) {
+		static $aEntries;
+
+		if($aEntries == null) {
+			$aEntries = $this->findEntries();
+		}
+
+		$aId = $this->extracEntryIdFromPath($theEntryPath);
+		$aValidEntries = array_keys($aEntries);
+
+		return in_array($aId, $aValidEntries);
+	}
+
+	public function getEntryById($theId) {
+		$aItemPath = $this->getEntriesDirPath() . $theId . '.md';
+		return $this->parseItem($aItemPath);
+	}
+
+	public function findPosts($theWithData = false) {
+		return $this->findEntries($theWithData, '[0-9]*.md');
+	}
+
+	public function extracEntryIdFromPath($theEntryPath) {
+		return substr(basename($theEntryPath), 0, -3);
+	}
+
+	public function findEntries($theWithData = false, $thePattern = '*.md') {
+		$aRet = array();
+		$aEntries = glob($this->getEntriesDirPath() . $thePattern);
+
+		foreach($aEntries as $aEntryPath) {
+			$aId = $this->extracEntryIdFromPath($aEntryPath);
+
+			if($theWithData) {
+				$aEntry = $this->getEntryById($aId);
+				$aRet[$aId] = $aEntry['meta'];
+				$aRet[$aId]['content'] = $aEntry['content'];
+			}
+
+			$aRet[$aId]['path'] = realpath($aEntryPath);
+		}
+
+		return $aRet;
 	}
 }
 
