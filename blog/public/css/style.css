@@ -153,16 +153,26 @@ ul.nav a:hover {
 	color: #1b1b1b;
 }
 
+.index h2 {
+	margin-bottom: 30px;
+}
+
 /* Timeline */
 
 .card-body {
 	padding-top: 10px;
 }
 
+.card-text {
+	font-weight: 500;
+	color: #000;
+}
+
 .card-note {
+	font-weight: bold;
 	font-size: 1.1em !important;
-	color: #a1a1a1;
-	margin-top: -5px;
+	color: #717171;
+	margin-top: -10px;
 }
 
 .timeline-header {

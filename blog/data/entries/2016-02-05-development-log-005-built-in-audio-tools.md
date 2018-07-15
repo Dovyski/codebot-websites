@@ -2,6 +2,7 @@
 title = "Development log 005 - built-in audio tools"
 author = 1
 layout = post
+thumbnail = /img/posts/thumbnail-devlog-005.jpg
 categories[] = blog
 tags[] = dev
 tags[] = log
