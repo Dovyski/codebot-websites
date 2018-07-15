@@ -85,7 +85,10 @@ ul.nav a:hover {
 	border: none;
 }
 .page h2 {
-	font-size: 2em;
+	font-size: 1.7em;
+}
+.page h3 {
+	font-size: 1.5em;
 }
 
 .page p {
@@ -120,6 +123,15 @@ ul.nav a:hover {
 }
 
 .page div.content p {
+	font-size: 1.3em;
+}
+
+.page div.content img {
+	max-width: 100%;
+	margin: 20px 0 20px 0;
+}
+
+.page div.content li {
 	font-size: 1.3em;
 }
 
