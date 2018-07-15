@@ -27,9 +27,11 @@ class App {
 		return $aEntry;
 	}
 
-	function __construct($theConfig, $theDataPath) {
-		$this->mConfig = $theConfig;
-		$this->mDataPath = $theDataPath;
+	function __construct() {
+		$aPathConfigFile = dirname(__FILE__) . '/../site.ini';
+
+		$this->mConfig = @parse_ini_file($aPathConfigFile, true);
+		$this->mDataPath = dirname(__FILE__) . '/../data/';
 		$this->mRender = new Parsedown();
 	}
 
