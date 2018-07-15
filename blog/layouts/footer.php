@@ -16,7 +16,7 @@
          </div>
          <div class="col-md-2">
            <h5>Misc</h5>
-           <p><a href="https://codebot.cc"><img src="<?php echo App::config('site.base_url'); ?>/img/icons/rss.svg" style="width: 16px; height: 16px;" /> Subscribe</a></p>
+           <p><a href="<?php echo App::config('site.base_url'); ?>/feed/"><img src="<?php echo App::config('site.base_url'); ?>/img/icons/rss.svg" style="width: 16px; height: 16px;" /> Subscribe</a></p>
          </div>
        </div>
 
