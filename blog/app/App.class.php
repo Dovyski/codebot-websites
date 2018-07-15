@@ -98,8 +98,48 @@ class App {
 			$aRawContent .= $aLine;
 		}
 
-		$aMeta = parse_ini_string($aRawMeta, true);
+		$aMeta = $this->parseMetaData($aRawMeta, $theItemPath);
 		return array('content' => $aRawContent, 'meta' => $aMeta);
+	}
+
+	public function getAuthorById($theId) {
+		$theId = $theId + 0;
+		$aAuthorsFile = $this->getAuthorsDirPath() . $theId . '.ini';
+
+		$aRet = array(
+			'id' => $theId,
+			'name' => 'Unknown (id='.$theId.')',
+			'email' => '',
+			'bio' => ''
+		);
+
+		if(file_exists($aAuthorsFile)) {
+			$aIni = parse_ini_file($aAuthorsFile);
+			$aRet = array_merge($aRet, $aIni);
+		}
+
+		$aRet['gravatar_hash'] = md5(trim($aRet['email']));
+		return $aRet;
+	}
+
+	public function parseMetaData($theRawMeta, $theItemPath) {
+		$aFileName = basename($theItemPath);
+		$aMeta = parse_ini_string($theRawMeta, true);
+
+		if(!isset($aMeta['date'])) {
+			$aParts = explode('-', $aFileName);
+
+			if(count($aParts) >= 4) {
+				$aMeta['date'] = $aParts[0] . '-' . $aParts[1] . '-' . $aParts[2];
+			} else {
+				$aMeta['date'] = date('Y-m-d', filemtime($theItemPath));
+			}
+		}
+
+		$aAuthorId = isset($aMeta['author']) ? $aMeta['author'] : '';
+		$aMeta['author'] = $this->getAuthorById($aAuthorId);
+
+		return $aMeta;
 	}
 
 	public function run($theRequest) {
@@ -117,6 +157,10 @@ class App {
 
 	public function getEntriesDirPath() {
 		return $this->mDataPath . 'entries/';
+	}
+
+	public function getAuthorsDirPath() {
+		return $this->mDataPath . 'authors/';
 	}
 
 	public function isEntryPathValid($theEntryPath) {
