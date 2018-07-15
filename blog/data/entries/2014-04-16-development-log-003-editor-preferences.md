@@ -1,5 +1,5 @@
 ---
-title = "Development log 003 - editor preferences"
+title = "Development log #003 - editor preferences"
 author = 1
 layout = post
 thumbnail = /img/posts/thumbnail-devlog-003.jpg

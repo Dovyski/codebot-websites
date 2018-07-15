@@ -1,5 +1,5 @@
 ---
-title = "Development log 002 - alpha status"
+title = "Development log #002 - alpha status"
 author = 1
 layout = post
 categories[] = blog

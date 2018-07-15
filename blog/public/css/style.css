@@ -164,15 +164,16 @@ ul.nav a:hover {
 }
 
 .card-text {
+	font-size: 1.65em !important;
+	line-height: 1.1em;
 	font-weight: 500;
 	color: #000;
 }
 
 .card-note {
-	font-weight: bold;
 	font-size: 1.1em !important;
 	color: #717171;
-	margin-top: -10px;
+	margin-top: -5px;
 }
 
 .timeline-header {

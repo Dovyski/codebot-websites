@@ -1,5 +1,5 @@
 ---
-title = "Development log 004 - moving to the cloud"
+title = "Development log #004 - moving to the cloud"
 author = 1
 layout = post
 thumbnail = /img/posts/thumbnail-devlog-004.jpg
