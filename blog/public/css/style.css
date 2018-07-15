@@ -123,6 +123,18 @@ ul.nav a:hover {
 	font-size: 1.3em;
 }
 
+.index a:active,
+.index a:hover,
+.index a:visited,
+.index a:link {
+	text-decoration: none;
+	color: #2b2b2b;
+}
+
+.index a:hover {
+	color: #1b1b1b;
+}
+
 /* Timeline */
 
 .card-body {

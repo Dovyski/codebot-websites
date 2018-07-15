@@ -12,6 +12,10 @@ class App {
 		return isset(self::$mData['item'][$theKey]) ? self::$mData['item'][$theKey] : '***UNDEFINED***';
 	}
 
+	public static function posts() {
+		return self::$mData['posts'];
+	}
+
 	public static function config($theKey) {
 		$aParts = explode('.', $theKey);
 		$aEntry = self::$mData['config'];
@@ -63,6 +67,7 @@ class App {
 		}
 
 		self::$mData = array(
+			'posts' => $this->findPosts(true),
 			'item' => array_merge($theMeta, array('content' => $theContent)),
 			'config' => $this->mConfig
 		);
