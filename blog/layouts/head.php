@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Gamedev IDE on the cloud">
+    <meta name="description" content="Codebot blog, a gamedev IDE on the cloud">
     <meta name="author" content="Fernando Bevilacqua">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="<?php echo App::config('site.base_url'); ?>/favicon.ico">
 
     <title><?php echo App::get('title'); ?> | Codebot blog</title>
 
@@ -15,26 +15,26 @@
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="Codebot">
-    <meta itemprop="description" content="Gamedev IDE on the cloud">
-    <meta itemprop="image" content="https://codebot.cc/img/facebook-social-img.jpg">
-    <meta itemprop="screenshot" content="https://codebot.cc/img/codebot-app.png">
+    <meta itemprop="description" content="<?php echo App::get('title'); ?> | Codebot blog">
+    <meta itemprop="image" content="<?php echo App::config('site.base_url'); ?>/img/facebook-social-img.jpg">
+    <meta itemprop="screenshot" content="<?php echo App::config('site.base_url'); ?>/img/codebot-app.png">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@As3GameGears">
-    <meta name="twitter:title" content="Codebot blog - <?php echo App::get('title'); ?>">
+    <meta name="twitter:site" content="<?php echo App::config('site.base_url'); ?>">
+    <meta name="twitter:title" content="<?php echo App::get('title'); ?> | Codebot blog">
     <meta name="twitter:description" content="Gamedev IDE on the cloud">
     <meta name="twitter:creator" content="@As3GameGears">
     <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="https://codebot.cc/img/facebook-social-img.jpg">
+    <meta name="twitter:image:src" content="<?php echo App::config('site.base_url'); ?>/img/facebook-social-img.jpg">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="<?php echo App::get('title'); ?>" />
+    <meta property="og:title" content="<?php echo App::get('title'); ?> | Codebot blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://codebot.cc" />
-    <meta property="og:image" content="https://codebot.cc/img/facebook-social-img.jpg" />
+    <meta property="og:url" content="<?php echo App::config('site.base_url'); ?>" />
+    <meta property="og:image" content="<?php echo App::config('site.base_url'); ?>/img/facebook-social-img.jpg" />
     <meta property="og:description" content="Gamedev IDE on the cloud" />
-    <meta property="og:site_name" content="Codebot" />
+    <meta property="og:site_name" content="Codebot blog" />
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo App::config('site.base_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
