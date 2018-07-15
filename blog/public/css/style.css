@@ -141,7 +141,10 @@ ul.nav a:hover {
 	padding-top: 10px;
 }
 
-.card-text {
+.card-note {
+	font-size: 1.1em !important;
+	color: #a1a1a1;
+	margin-top: -5px;
 }
 
 .timeline-header {
@@ -319,10 +322,15 @@ ul.nav a:hover {
   z-index: 15;
 }
 
+.desc p.title {
+	font-size: 1.5em;
+	line-height: 1.1em;
+}
+
 .direction-l .desc,
 .direction-r .desc {
   position: relative;
-  margin: 1em 1em 0 1em;
+  margin: 1em 0.1em 0 0.1em;
   padding: 1em;
   z-index: 15;
 }
@@ -490,7 +498,7 @@ footer a:visited {
   }
 
   .direction-r .desc {
-    margin: 1em 0 0 0.75em;
+    margin: 1em 0 0 0.5em;
   }
 }
 

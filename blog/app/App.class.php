@@ -98,7 +98,7 @@ class App {
 
 		$aItem = $this->parseMetaData($aRaw['meta'], $theItemPath);
 		$aItem['content'] = $this->parseRawContent($aRaw['content']);
-		$aItem['excerpt'] = substr(strip_tags($aItem['content']), 0, 170);
+		$aItem['excerpt'] = substr(strip_tags($aItem['content']), 0, 110);
 		$aItem['path'] = realpath($theItemPath);
 
 		return $aItem;
@@ -209,7 +209,7 @@ class App {
 
 	public function findEntries($theWithData = false, $thePattern = '*.md') {
 		$aRet = array();
-		$aEntries = glob($this->getEntriesDirPath() . $thePattern);
+		$aEntries = glob($this->getEntriesDirPath() . $thePattern, GLOB_NOSORT);
 
 		foreach($aEntries as $aEntryPath) {
 			$aId = $this->extracEntryIdFromPath($aEntryPath);
@@ -221,7 +221,7 @@ class App {
 			$aRet[$aId]['path'] = realpath($aEntryPath);
 		}
 
-		return $aRet;
+		return array_reverse($aRet);
 	}
 }
 
