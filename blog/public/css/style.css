@@ -91,6 +91,12 @@ ul.nav a:hover {
 	font-size: 1.5em;
 }
 
+.page h2,
+.page h3 {
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+
 .page p {
 	font-size: 1.3em;
 }

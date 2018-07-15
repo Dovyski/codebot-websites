@@ -37,7 +37,7 @@
         <ul class="timeline">
             <?php
                 $aDir = 'r';
-                foreach($aPosts as $aPost) {
+                foreach($aPosts as $aId => $aPost) {
                     $aDir = $aDir == 'l' ? 'r' : 'l';
             ?>
                     <li>
