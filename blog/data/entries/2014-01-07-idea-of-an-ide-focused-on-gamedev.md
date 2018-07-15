@@ -7,8 +7,6 @@ tags[] = dev
 tags[] = log
 ---
 
-_[This post is a reproduction of the content originally posted on [AS3GameGears](http://www.as3gamegears.com/blog/codebot-an-ide-focused-on-gamedev/).]_
-
 I decided to kick off 2014 with a project that I’ve been willing to develop for a while. I had this idea in 2013 while struggling to overcome some pretty common gamedev tasks. My idea is to create an IDE focused on gamedev. Meet Codebot!
 
 ## Why, man, WHY?! There are so many IDEs already!
@@ -48,3 +46,5 @@ That’s what I have planned so far.
 My current plan is to implement the code editing parts first, which includes open/saving files, etc. After that I want to start adding building options, starting with Flash/AIR then HTML5. When everything is usable, I will jump into the sliding panels. Probably the first panel will be something to add AIR native extensions to Flash projects.
 
 If you are interested on Codebot, follow its development on this blog and on [Github](https://github.com/Dovyski/Codebot). More technical stuff will come as I progress.
+
+_[This post is a reproduction of the content originally posted on [AS3GameGears](http://www.as3gamegears.com/blog/codebot-an-ide-focused-on-gamedev/).]_
