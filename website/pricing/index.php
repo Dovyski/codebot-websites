@@ -31,7 +31,7 @@
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <p class="pricing-title">Indie</p>
-                            <p class="pricing-rate"><sup>$</sup> 1 <span>/Mo.</span></p>
+                            <p class="pricing-rate"><sup>$</sup> 0 <span>/Mo.</span></p>
                             <a class="btn btn-lg btn-primary" href="https://web.codebot.cc" role="button">Sign up</a>
                         </div>
 
@@ -50,7 +50,7 @@
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <p class="pricing-title">Triple A</p>
-                            <p class="pricing-rate"><sup>$</sup> 2 <span>/Mo.</span></p>
+                            <p class="pricing-rate"><sup>$</sup> 0 <span>/Mo.</span></p>
                             <a class="btn btn-lg btn-primary" href="https://web.codebot.cc" role="button">Sign up</a>
                         </div>
 

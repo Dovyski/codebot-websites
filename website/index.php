@@ -18,7 +18,6 @@
               <ul class="nav navbar-nav pull-right">
                   <li><a href="./about">About</a></li>
                   <li><a href="#features">Features</a></li>
-                  <li><a href="./pricing">Pricing</a></li>
                   <li><a href="http://blog.codebot.cc" target="_blank">Blog</a></li>
                   <li><a href="https://github.com/Dovyski/Codebot" target="_blank"><img src="./img/github.png" style="width: 35px; height: auto; margin-top: -10px;" title="Github repo"> Fork on Github</a></li>
               </ul>
@@ -46,7 +45,6 @@
     <div class="container marketing">
       <!-- Three columns of text below the carousel -->
       <div class="row marketing-top">
-        <a name="features"></a>
         <div class="col-lg-4">
           <img src="./img/cloud-upload.png" alt="Cloud-based">
           <h2>Cloud-based</h2>
@@ -67,7 +65,7 @@
 
    <div class="container-fluid marketing">
       <!-- START THE FEATURETTES -->
-
+      <a name="features"></a>
       <div class="row featurette featurette-odd">
         <div class="col-md-1"></div>
         <div class="col-md-5">

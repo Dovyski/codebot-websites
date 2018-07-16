@@ -1,4 +1,4 @@
 ---
-title = "This is a test"
+title = "A gamedev IDE on the cloud"
 layout = index
 ---

@@ -6,10 +6,9 @@
          </div>
          <div class="col-md-1"></div>
          <div class="col-md-2">
-           <h5>About</h5>
-           <p><a href="<?php echo BASE_URL; ?>/">Product</a></p>
-           <p><a href="<?php echo BASE_URL; ?>/pricing">Pricing</a></p>
-           <p><a href="<?php echo BASE_URL; ?>/about">About Us</a></p>
+           <h5>General</h5>
+           <p><a href="https://github.com/Dovyski/Codebot" target="_blank">Codebot on Github</a></p>
+           <p><a href="<?php echo BASE_URL; ?>/about">About Codebot</a></p>
          </div>
          <div class="col-md-2">
              <h5>Legal</h5>
@@ -19,8 +18,7 @@
          </div>
          <div class="col-md-2">
              <h5>Social</h5>
-             <p><a href="http://blog.codebot.cc" target="_blank">Blog</a></p>
-             <p><a href="https://github.com/Dovyski/Codebot" target="_blank">Github</a></p>
+             <p><a href="https://blog.codebot.cc" target="_blank">Blog</a></p>
              <p><a href="https://twitter.com/As3GameGears" target="_blank">Twitter</a></p>
          </div>
        </div>

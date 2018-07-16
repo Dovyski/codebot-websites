@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Gamedev IDE on the cloud">
     <meta name="author" content="Fernando Bevilacqua">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="<?php echo BASE_URL; ?>/favicon.ico">
 
     <title>Codebot - gamedev IDE on the cloud</title>
 
@@ -46,5 +46,5 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo BASE_URL; ?>/css/style.css?20171208" rel="stylesheet">
+    <link href="<?php echo BASE_URL; ?>/css/style.css?20180716" rel="stylesheet">
   </head>

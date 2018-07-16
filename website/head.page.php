@@ -13,7 +13,6 @@
               <ul class="nav navbar-nav pull-right">
                 <li><a href="../about">About</a></li>
                 <li><a href="../#features">Features</a></li>
-                <li><a href="../pricing">Pricing</a></li>
                 <li><a href="http://blog.codebot.cc" target="_blank">Blog</a></li>
                 <li><a href="https://github.com/Dovyski/Codebot" target="_blank"><img src="../img/github.png" style="width: 35px; height: auto; margin-top: -10px;" title="Github repo"> Fork on Github</a></li>
               </ul>
