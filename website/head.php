@@ -47,4 +47,15 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo BASE_URL; ?>/css/style.css?20180716" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10567379-12"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-10567379-12');
+    </script>
+
   </head>
