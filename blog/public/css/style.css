@@ -140,6 +140,12 @@ ul.nav a:hover {
 	display: block;
 }
 
+.page div.content img.emoji {
+	width: 20px;
+	height:20px;
+	display: inline;
+}
+
 .page div.content li {
 	font-size: 1.3em;
 }
