@@ -21,11 +21,12 @@ echo '<copyright>Copyright (C) '.date('Y').' blog.codebot.cc</copyright>';
 
 foreach($aPosts as $aPost) {
     echo '<item>';
+        $aPermaLink = $aSiteURL . '/' . substr(basename($aPost['path']), 0, -3);
         echo '<title>' . $aPost['title'] . '</title>';
         echo '<description><![CDATA[' . substr($aPost['content'], 0, 400) . ']]></description>';
-        echo '<link>' . $aSiteURL . '/' . basename($aPost['path']) . '</link>';
+        echo '<link>' . $aPermaLink . '</link>';
         echo '<pubDate>' . date("D, d M Y H:i:s O", strtotime($aPost['date'])) . '</pubDate>';
-        echo '<guid isPermaLink="true">' . $aSiteURL . '/' . basename($aPost['path']) . '</guid>';
+        echo '<guid isPermaLink="true">' . $aPermaLink . '</guid>';
     echo '</item>';
 }
 
