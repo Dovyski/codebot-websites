@@ -153,6 +153,7 @@ ul.nav a:hover {
 	width: 20px;
 	height:20px;
 	display: inline;
+	margin: 0;
 }
 
 .page div.content li {
