@@ -198,10 +198,10 @@ ul.nav a:hover {
 }
 
 .page div.sidebar li {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	font-size: 1.1em;
 	margin-left: 0;
-	list-style: none;
+	list-style: square;
 }
 
 .page div.sidebar li::before {

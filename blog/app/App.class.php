@@ -89,7 +89,7 @@ class App {
 		return $aRet;
 	}
 
-	private function parseItem($theItemPath) {
+	private function parseItem($theItemPath, $theItemId) {
 		$aRaw = $this->loadItem($theItemPath);
 
 		if($aRaw == null) {
@@ -100,6 +100,7 @@ class App {
 		$aItem['content'] = $this->parseRawContent($aRaw['content']);
 		$aItem['excerpt'] = substr(strip_tags($aItem['content']), 0, 110);
 		$aItem['path'] = realpath($theItemPath);
+		$aItem['id'] = $theItemId;
 
 		return $aItem;
 	}
@@ -199,7 +200,7 @@ class App {
 
 	public function getEntryById($theId) {
 		$aItemPath = $this->getEntriesDirPath() . $theId . '.md';
-		return $this->parseItem($aItemPath);
+		return $this->parseItem($aItemPath, $theId);
 	}
 
 	public function findPosts($theWithData = false) {

@@ -1,6 +1,8 @@
 <?php
     require_once(dirname(__FILE__).'/head.php');
     require_once(dirname(__FILE__).'/head.page.php');
+
+    $aPosts = App::posts();
 ?>
 
 <div class="container page">
@@ -22,11 +24,22 @@
     <div class="col-md-2 right-wrapper">
         <div class="sidebar">
             <h2>Related content</h2>
-            <li><a href="">This is a really big title to stress the layout</a></li>
-            <li><a href="">This is a short title to make things nice</a></li>
-            <li><a href="">What happens when you have things different?</a></li>
-            <hr>
+            <?php
+                $aAmount = 4;
+                $aCount = 0;
+                foreach($aPosts as $aId => $aPost) {
+                    if(App::get('id') == $aPost['id']) {
+                        continue;
+                    }
 
+                    echo '<li><a href="' . App::config('site.base_url') . '/' . $aId . '">' . $aPost['title'] .'</a></li>';
+
+                    if(++$aCount >= $aAmount) {
+                        break;
+                    }
+                }
+            ?>
+            <hr>
             <p><a href="<?= App::config('site.base_url'); ?>/feed/"><img src="<?= App::config('site.base_url'); ?>/img/icons/rss.svg" /> RSS</a></p>
             <p><a href="https://twitter.com/As3gamegears"><img src="<?= App::config('site.base_url'); ?>/img/icons/twitter.svg" /> Twitter</a></p>
             <p><a href="https://github.com/Dovyski/Codebot"><img src="<?= App::config('site.base_url'); ?>/img/icons/github.svg" /> Github</a></p>
