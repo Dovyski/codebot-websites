@@ -113,7 +113,7 @@ class App {
 		}
 
 		// Add emojis
-		$aHtml = str_replace(':)', '<img src="'.$this->mConfig['site']['base_url'].'/img/icons/smile-o.svg" class="emoji" title="Smile" />', $aHtml);
+		$aHtml = str_replace(':)', '<img src="'.$this->mConfig['site']['base_url'].'/img/icons/smile-o.svg" class="emoji" title="Smile" style="width: 20px; height: 20px;" />', $aHtml);
 
 		return $aHtml;
 	}
