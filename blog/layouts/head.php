@@ -46,7 +46,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo App::config('site.base_url'); ?>/css/style.css?20189716" rel="stylesheet">
+    <link href="<?php echo App::config('site.base_url'); ?>/css/style.css?20180727" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-10567379-13"></script>

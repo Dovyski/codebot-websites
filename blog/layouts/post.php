@@ -5,21 +5,42 @@
 
 <div class="container page">
   <div class="row">
-    <div class="col-md-10">
-      <h1><?php echo App::get('title'); ?></h1>
+    <div class="col-md-10 left-wrapper">
+      <h1><?= App::get('title'); ?></h1>
       <span class="meta">
-          <li class="date"><img src="<?php echo App::config('site.base_url'); ?>/img/icons/calendar-o.svg" title="Published on <?php echo App::get('date'); ?>"/><time datetime="<?php echo App::get('date'); ?>"><?php echo App::get('date'); ?></time></li>
-          <li class="author"><img src="https://www.gravatar.com/avatar/<?php echo App::get('author')['gravatar_hash']; ?>" title="Author avatar" /><?php echo App::get('author')['name']; ?></li>
+          <li class="date"><img src="<?= App::config('site.base_url'); ?>/img/icons/calendar-o.svg" title="Published on <?= App::get('date'); ?>"/><time datetime="<?= App::get('date'); ?>"><?= App::get('date'); ?></time></li>
+          <li class="author"><img src="https://www.gravatar.com/avatar/<?= App::get('author')['gravatar_hash']; ?>" title="Author avatar" /><?= App::get('author')['name']; ?></li>
 
           <?php if(count(App::get('tags')) > 0) { ?>
-              <li class="tags"><img src="<?php echo App::config('site.base_url'); ?>/img/icons/tags.svg" title="Tags"/><?php echo implode(',', App::get('tags')); ?></li>
+              <li class="tags"><img src="<?= App::config('site.base_url'); ?>/img/icons/tags.svg" title="Tags"/><?= implode(',', App::get('tags')); ?></li>
           <?php } ?>
       </span>
       <div class="content">
-          <?php echo App::get('content'); ?>
+          <?= App::get('content'); ?>
       </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-md-2 right-wrapper">
+        <div class="sidebar">
+            <h2>Related content</h2>
+            <li><a href="">This is a really big title to stress the layout</a></li>
+            <li><a href="">This is a short title to make things nice</a></li>
+            <li><a href="">What happens when you have things different?</a></li>
+            <hr>
+
+            <p><a href="<?= App::config('site.base_url'); ?>/feed/"><img src="<?= App::config('site.base_url'); ?>/img/icons/rss.svg" /> RSS</a></p>
+            <p><a href="https://twitter.com/As3gamegears"><img src="<?= App::config('site.base_url'); ?>/img/icons/twitter.svg" /> Twitter</a></p>
+            <p><a href="https://github.com/Dovyski/Codebot"><img src="<?= App::config('site.base_url'); ?>/img/icons/github.svg" /> Github</a></p>
+        </div>
+
+        <div class="sidebar ad">
+            <h2>Codebot</h2>
+            <p>
+                <a href="<?= App::config('site.base_url'); ?>/feed/">
+                    <img src="<?= App::config('site.base_url'); ?>/img/codebot-logo-64.png" title="Codebot logo" />
+                </a>
+            </p>
+            <p><a class="btn btn-primary" href="https://web.codebot.cc" role="button">Try now, it's free!</a></p>
+        </div>
     </div>
   </div>
 </div>
