@@ -182,7 +182,7 @@ ul.nav a:hover {
 	border: solid 1px #e1e1e1;
 	font-size: 0.9em;
 	background: #f9f9f9;
-	padding: 5px 5px 5px 10px;
+	padding: 18px;
 }
 
 .page div.sidebar h2 {
@@ -190,6 +190,7 @@ ul.nav a:hover {
 	font-weight: bolder;
 	font-size: 1.5em;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .page div.sidebar h2 img {
@@ -201,10 +202,12 @@ ul.nav a:hover {
 	margin-bottom: 15px;
 	font-size: 1.1em;
 	margin-left: 0;
-	list-style: square;
+	list-style: none;
 }
 
 .page div.sidebar li::before {
+	content: "\2022";
+	margin-right: 5px;
 }
 
 .page div.sidebar img {
